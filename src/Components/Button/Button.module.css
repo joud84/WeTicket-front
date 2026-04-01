@@ -1,0 +1,36 @@
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+  width: 100%;
+  font-family: inherit;
+}
+
+/* لون الزر الأساسي (Primary) */
+.primary {
+  background-color: var(--primary-color, #4F46E5);
+  color: white;
+}
+.primary:hover {
+  background-color: var(--primary-hover, #4338CA);
+}
+
+/* لون الزر الثانوي (Secondary) */
+.secondary {
+  background-color: var(--secondary-color, #E5E7EB);
+  color: #374151;
+}
+.secondary:hover {
+  background-color: #D1D5DB;
+}
+
+/* حالة الزر وهو معطل أو يحمل */
+.btn:disabled {
+  background-color: #9CA3AF;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
