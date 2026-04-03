@@ -1,13 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
-
 import Login from "./pages/login/Login";
 import Home from "./pages/home/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
+import AuthLayout from "./Components/layout/AuthLayout/AuthLayout";
+import ClientLayout from "./Components/layout/ClientLayout/ClientLayout";
+import Guard from "./Components/Guard/Guard";
 
-import AuthLayout from "./layout/AuthLayout/AuthLayout";
-import ClientLayout from "./layout/ClientLayout/ClientLayout";
-// استيراد الحارس اللي سويناه
-import Guard from "./components/Guard/Guard";
 
 export default function App() {
   return (
