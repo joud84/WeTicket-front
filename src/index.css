@@ -1,17 +1,7 @@
-/* إعداد المتغيرات الأساسية للمشروع */
 :root {
-  /* الألوان الأساسية */
-  --primary-color: #4F46E5;
-  --secondary-color: #E5E7EB;
-  --background-color: #f3f4f6;
-  --text-color: #1f2937;
-  
-  /* الخطوط */
-  --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
-  /* المسافات والحدود */
-  --spacing-md: 20px;
-  --border-radius: 8px;
+  --primary-color: #5B406D; /* لون الأزرار والنصوص */
+  --bg-color: #F8F6FA; /* لون الخلفية الفاتح */
+  --white: #FFFFFF;
 }
 
 /* تنسيق عام للصفحة */

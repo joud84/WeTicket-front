@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router"; 
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
-// تغيير الاستيراد
 import styles from "./Login.module.css"; 
+import loginImage from '../../assets/card-login.png'; // استيراد صورة الفيقما
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -28,20 +28,33 @@ export default function Login() {
   };
 
   return (
-    <main className={styles["login-container"]}>
-      <section className={styles["login-box"]}>
-        <h2>تسجيل الدخول - WeTicket</h2>
-        <p>مرحباً بك مجدداً في نظام إدارة الفعاليات</p>
-        <form onSubmit={handleLogin}>
+    <main className={styles.loginPage}>
+      
+      {/* القسم اليسار: الفورم والنصوص حقتكم */}
+      <section className={styles.formSection}>
+        <h1 className={styles.title}>مرحباً !</h1>
+        <p className={styles.subtitle}>الملف الشخصي</p>
+
+        <form onSubmit={handleLogin} className={styles.form}>
           <Input label="البريد الإلكتروني" type="email" placeholder="أدخل إيميلك هنا" value={email} onChange={(e) => setEmail(e.target.value)} />
           <Input label="كلمة المرور" type="password" placeholder="أدخل كلمة المرور" value={password} onChange={(e) => setPassword(e.target.value)} />
-          {error && <p className={styles["error-message"]}>{error}</p>}
-          <Button type="submit" loading={loading} variant="primary">دخول</Button>
+          
+          {error && <p className={styles.errorMessage}>{error}</p>}
+          
+          {/* استخدمنا زركم المخصص */}
+          <Button type="submit" loading={loading} variant="primary">تسجيل الدخول</Button>
+          
+          <p className={styles.registerLink}>
+            ليس لديك حساب؟ <Link to="/home">إنشاء حساب جديد</Link>
+          </p>
         </form>
-        <p className={styles["register-link"]}>
-          ليس لديك حساب؟ <Link to="/home">إنشاء حساب جديد</Link>
-        </p>
       </section>
+
+      {/* القسم اليمين: الصورة الكبيرة */}
+      <figure className={styles.imageSection}>
+        <img src={loginImage} alt="WeTicket Event" className={styles.heroImage} />
+      </figure>
+
     </main>
   );
 }

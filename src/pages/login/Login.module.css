@@ -1,58 +1,65 @@
-.login-container {
+.loginPage {
+  display: flex; /* هذا يخليهم جنب بعض */
+  min-height: 100vh; /* يخلي الصفحة تأخذ طول الشاشة كامل */
+  background-color: var(--bg-color); /* لون الخلفية اللي حفظناه في الروت */
+  font-family: sans-serif;
+  direction: rtl; /* عشان التنسيق عربي */
+}
+
+/* القسم اليسار: حق الفورم */
+.formSection {
+  flex: 1; /* يأخذ نص مساحة الشاشة */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px; /* عشان ما يفرش الفورم بزيادة */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* مسافة بين كل مدخل والثاني */
+}
+
+.title {
+  color: var(--primary-color);
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* القسم اليمين: حق الصورة */
+.imageSection {
+  flex: 1; /* يأخذ النص الثاني من الشاشة */
+  margin: 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f3f4f6;
-  direction: rtl; /* اتجاه عربي من اليمين لليسار */
+}
+
+.heroImage {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* يخلي الصورة تملأ المربع بدون ما تنمط */
+  border-radius: 40px; /* الانحناء اللي في الفيقما */
 }
 
-.login-box {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-}
-
-.login-box h2 {
-  margin-bottom: 10px;
-  color: #1f2937;
+.registerLink {
   text-align: center;
-}
-
-.login-box p {
-  color: #6b7280;
-  text-align: center;
-  margin-bottom: 25px;
+  margin-top: 15px;
   font-size: 14px;
 }
 
-.error-message {
-  color: #ef4444;
-  background-color: #fee2e2;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.register-link {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #4b5563;
-}
-
-.register-link a {
-  color: #4f46e5;
+.registerLink a {
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
-}
-
-.register-link a:hover {
-  text-decoration: underline;
 }
